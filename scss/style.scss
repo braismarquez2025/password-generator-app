@@ -1,0 +1,257 @@
+@import 'variables';
+@import 'mixins';
+
+
+body {
+    font-family: $font-primary;
+    margin: 0;
+    background: $gradient-fondo;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 40px 16px;
+
+    @include breakpoint(tablet) {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+    @include breakpoint(desktop) {
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+   
+}
+
+
+.title {
+    display: flex;
+    justify-content: center;
+    color: $grey-600;
+}
+
+
+.password {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $grey-800;
+    padding: 16px;
+    margin-bottom: 32px;
+
+    &_copy {
+        color: $grey-200;
+        margin: 0;
+    }
+
+    &_img {
+        width: 18px;
+        height: 20px;
+        cursor: pointer;
+    }
+
+    &_copied {
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        gap: 16px;
+
+        p {
+            color: $green-200;
+            margin: 0;
+        }
+    }
+}
+
+
+.main {
+    background-color: $grey-800;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    @include breakpoint(desktop) {
+        padding: 24px 32px 40px 32px;
+    }
+}
+
+
+.longitud {
+    &_number {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        &-label {
+            color: $grey-200;
+        }
+
+        &-span {
+            color: $green-200;
+        }
+
+    }
+
+    
+
+    .slider {
+        width: 100%;
+        border-radius: 0; /* quita el redondeo de la barra */
+        -webkit-appearance: none;
+        cursor: pointer;
+        background: $gradient;
+        
+
+        // Con esto quitamos el border-radius y colocamos el color de fondo
+        &::-webkit-slider-runnable-track {
+            border-radius: 0;
+            height: 8px;
+        }
+
+        // Para modificar el puntero del slider
+        &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 28px;
+            height: 28px;
+            background: $grey-200;
+            cursor: pointer;
+            border-radius: 50%;
+            position: relative;
+            bottom: 10px;
+
+            &:hover {
+                border: 3px solid $green-200;
+                background: $grey-850;
+            }
+        }
+    }
+
+}
+
+
+.checkbox {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &_option {
+        display: flex;
+        gap: 16px;
+        position: relative;
+
+        &-box {
+            width: 20px;
+            height: 20px;
+            background-color: $grey-800;
+            position: relative;
+            border: 2px solid $grey-200;
+            cursor: pointer;
+        }
+
+        p {
+            color: $grey-200;
+            margin: 0;
+        }
+    }
+}
+
+
+.box-checked {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: -2px;
+    left: -1px;
+    background-color: $green-200;
+    background-image: url(../assets/images/icon-check.svg);
+    background-repeat: no-repeat;
+    background-size: 18px;
+    background-position: center;
+    pointer-events: none;
+    cursor: pointer;
+}
+
+
+input[type="checkbox"] {
+    display: none;
+}
+
+
+.segura {
+    background-color: $grey-850;
+    padding: 14px 16px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+
+    &_text {
+        color: $grey-600;
+        text-transform: uppercase;
+        margin: 0;
+    }
+
+    &_content {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        
+
+        &-grado {
+            margin: 0;
+            max-width: 100px;
+            color: $grey-200;
+            text-transform: uppercase;
+        }
+
+        .boxes {
+            display: flex;
+            gap: 8px;
+        }
+    }
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    gap: 16px;
+    background-color: $green-200;
+    padding: 16px 104px;
+    cursor: pointer;
+
+    &_arrow {
+        width: 12px;
+        height: 12px;
+
+        &-hover {
+            display: none;
+        }
+    }
+
+    &:hover {
+        border: 2px solid $green-200;
+        background-color: $grey-850;
+        color: $green-200;
+
+    }
+}
+
+.button:hover .button_arrow {
+    display: none;
+}
+
+.button:hover .button_arrow-hover {
+    display: block;
+}
+
+.estilos {
+    width: 10px;
+    height: 28px;    
+    border: 2px solid $grey-200;
+    box-sizing: border-box;
+}

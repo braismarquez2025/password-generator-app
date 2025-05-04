@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Password generator app</title>
+</head>
+<body>
+  <div class="container">
+    <div class="title">
+      <p class="text-preset-4">Password Generator</p>
+    </div>
+    <div class="password">
+      <p id="password" class="password_copy text-preset-2">P4$5W0rD!</p>
+      <div class="password_copied">
+      <img class="password_img" src="assets\images\icon-copy.svg" alt="copy">
+      </div>
+    </div>
+
+  <div class="main">
+    <div class="longitud">
+      <div class="longitud_number">
+        <label for="slider" class="longitud_number-label text-preset-4">Character Length</label>
+        <span id="sliderValue" class="longitud_number-span text-preset-2">10</span>
+      </div>
+      <input type="range" id="slider" class="slider" min="0" max="20" value="10">
+    </div>
+
+
+    <div class="checkbox">
+      <label class="checkbox_option">
+        <span class="checkbox_option-box check" data-type="uppercaseLetters"></span>
+        <input  type="checkbox" value="Uppercase" class="text-preset-4"><p>Include Uppercase Letters</p>
+      </label>
+      <label class="checkbox_option">
+        <span class="checkbox_option-box check" data-type="lowercaseLetters"></span>
+        <input  type="checkbox" value="Lowercase" class="text-preset-4"><p>Include Lowercase Letters</p>
+      </label>
+      <label class="checkbox_option">
+        <span class="checkbox_option-box check" data-type="numbers"></span>
+        <input  type="checkbox" value="Numbers" class="text-preset-4"><p>Include Numbers</p>
+      </label>
+      <label class="checkbox_option">
+        <span class="checkbox_option-box check" data-type="symbols"></span>
+        <input  type="checkbox" value="Symbols" class="text-preset-4"><p>Include Symbols</p>
+      </label>
+
+    </div>
+
+    <div class="segura">
+      <p class="segura_text text-preset-4">Strength</P>
+      <div class="segura_content">
+        <p class="segura_content-grado text-preset-3" id="texto_seguridad"></p>
+        <div class="boxes">
+          <div class="segura_content-box estilos"></div>
+          <div class="segura_content-box estilos"></div>
+          <div class="segura_content-box estilos"></div>
+          <div class="segura_content-box estilos"></div>   
+        </div>   
+      </div>
+    </div>
+
+    <div class="button text-preset-4" id="generate">Generate
+    <img class="button_arrow" src="assets\images\icon-arrow-right.svg" alt="arrow">
+    <img class="button_arrow-hover" src="assets\images\icon-arrow-right-hover.svg" alt="arrow">
+    </div>
+  
+  
+  </div>
+
+  
+
+ 
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>
