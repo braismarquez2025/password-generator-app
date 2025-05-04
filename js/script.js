@@ -46,6 +46,7 @@ function generarContraseña() {
 
     if (oneChecked) {
         mostrarPassword.textContent = password;
+        mostrarPassword.style.color = "#E6E5EA";
         comprobarContraseña(password);
     }
     
